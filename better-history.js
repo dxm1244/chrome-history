@@ -5,7 +5,7 @@ let historyItems = [];
 
 //remove visits to history page from user history
 browser.history.onVisited.addListener((historyItem) => {
-    if (historyItem.url === browser.extension.getURL('better-history.html'))
+    if (historyItem.url === browser.runtime.getURL('better-history.html'))
         browser.history.deleteUrl({ url: historyItem.url });
 });
 
