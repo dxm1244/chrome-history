@@ -75,7 +75,4 @@ async function processSearchResults(items) {
     }
 }
 
-// Debugger: about:debugging#/runtime/this-firefox
-// HISTORY API: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/history
-
 search();
