@@ -1,0 +1,255 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;
+    background-color: #333;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.emboss {
+    border-color: #222;
+    border-bottom-color: #111;
+    border-right-color: #111;
+}
+
+.emboss:active {
+    border-color: #222;
+    border-top-color: #111;
+    border-left-color: #111;
+}
+
+.sidebarButton {
+    background-color: #333;
+    color: #EEE;
+    margin: .25em;
+}
+
+.sidebarButton:hover {
+    background-color: #777;
+}
+
+.sidebarButton:active {
+    background-color: #555;
+}
+
+.queryButton {
+    width: 4em;
+}
+
+.deleteButton {
+    background-color: transparent;
+    border-radius: 2px;
+    color: #EEE;
+    border-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    margin: auto 0 auto .25em;
+    width: 1.5em;
+    height: 1.5em;
+    min-width: 1.5em;
+}
+
+.deleteButton:hover {
+    background-color: #555;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    color: #EEE;
+    width: 30%;
+}
+
+#history {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    overflow-y: auto;
+}
+
+.queryButtonContainer {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.checkbox {
+    min-width: 1em;
+    width: 1em;
+    height: 1em;
+    appearance: none;
+    background-color: #BBB;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: #777;
+    margin-right: .5em;
+}
+
+.checkbox:checked {
+    appearance: revert;
+    accent-color: rgb(26, 103, 205);
+}
+
+.checkBoxLabel {
+    font-size: 14px;
+}
+
+.input {
+    background-color: #333;
+    color: #EEE;
+    margin: .25em;
+    font-family: sans-serif;
+}
+
+#search {
+    flex-grow: 1;
+    min-width: 3em;
+}
+
+.datePicker {
+    width: 35%;
+}
+
+.timePicker {
+    width: 20%;
+}
+
+.datePickerLabel {
+    width: 2.5em;
+    min-width: 2.5em;
+    font-size: 13px;
+}
+
+.glowBorder {
+    box-shadow: 0 0 5px #AAA;
+    border-radius: 5px;
+}
+
+.sidebarBox {
+    padding-top: .5em;
+    margin: .5em .5em 1em .5em;
+    display: flex;
+    overflow: hidden;
+}
+
+#buttonBox {
+    display: flex;
+    padding: .5em 0em .5em 0;
+    margin: .25em .5em 1em .5em;
+    flex-grow: 1;
+    align-items: bottom;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#buttonBox > button {
+    width: 7em;
+}
+
+#buttonBox > div {
+    flex-grow: 1;
+}
+
+#queryBox {
+    flex-direction: column;
+}
+
+#settingsBox {
+    align-items: center;
+}
+
+.searchRow {
+    display: flex;
+    margin: 0 .5em .25em .5em;
+    align-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+.day {
+    padding: 1em;
+    margin: .5em 2em .5em 2em;
+    margin-left: .5em;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+}
+
+.dayTitle {
+    font-size: 1.25em;
+    margin-bottom: .5em;
+    color: #EEE;
+}
+
+.item {
+    font-size: .85em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: .25em 0 .25em 0;
+    align-items: center;
+}
+
+.item:hover {
+    background-color: #444;
+    border-radius: 1px;
+}
+
+.linkContainer {
+    margin: auto;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.favicon {
+    object-fit: fill;
+    width: 1em;
+    height: 1em;
+    margin-right: .25em;
+}
+
+.link > span {
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title {
+    color: #EEE;
+    margin-left: .25em;
+    margin-right: .5em;
+}
+
+.url {
+    color: #999;
+    font-size: .75em;
+    font-weight: 200;
+    min-width: 15%;
+    max-width: 25%;
+}
+
+.itemTime {
+    color: #EEE;
+    margin: auto;
+    margin-right: 1.5em;
+    width: 5em;
+    min-width: 5em;
+}

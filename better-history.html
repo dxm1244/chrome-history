@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="better-history.css">
+    </head>
+    <body>
+        <div id="options">
+            <div id="queryBox" class="sidebarBox glowBorder">
+                <div class="searchRow">
+                    <input id="search" class="emboss input" type="text" placeholder="Search history" />
+                    <input id="searchByTitle" class="checkbox" type="checkbox" checked="true" />
+                    <label for="searchByTitle" class="checkBoxLabel">Title</label>
+                    <input id="searchByUrl" class="checkbox" type="checkbox" checked="true"/>
+                    <label for="searchByUrl" class="checkBoxLabel">URL</label>
+                </div>
+                <div class="searchRow">
+                    <span class="datePickerLabel">From</span>
+                    <input id="datePickerStart" class="datePicker emboss input" type="date" min="2020-01-01" />
+                    <input id="timePickerStart" class="timePicker emboss input" type="time" min="00:00" /> 
+                    <button id="clearStartDateButton" class="deleteButton">X</button>
+                    <div class="queryButtonContainer">
+                        <button id="searchClearButton" class="sidebarButton queryButton emboss">Clear</button>
+                    </div>
+                </div>
+                <div class="searchRow">
+                    <span class="datePickerLabel">Until</span>
+                    <input id="datePickerEnd" class="datePicker emboss input" type="date" min="2020-01-01" />
+                    <input id="timePickerEnd" class="timePicker emboss input" type="time" min="23:59" /> 
+                    <button id="clearEndDateButton" class="deleteButton">X</button>
+                    <div class="queryButtonContainer">
+                        <button id="searchButton" class="sidebarButton queryButton emboss">Search</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="buttonBox">
+                <div></div>
+                <button id="selectAllButton" class="sidebarButton emboss">Select All</button>
+                <button id="deselectAllButton" class="sidebarButton emboss">Unselect All</button>
+                <button id="deleteButton" class="sidebarButton emboss">Delete</button>
+            </div>
+        </div>
+        <div id="history">
+
+        </div>
+
+        <script src="js/utils.js"></script>
+        <script type="module" src="better-history.js"></script>
+    </body>
+</html>

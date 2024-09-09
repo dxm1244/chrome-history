@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "better-history",
+    "version": "1.0",
+  
+    "description": "Opens the better-history extension window.",
+  
+    "icons": {
+      "48": "icons/toolbar_icon.svg",
+      "96": "icons/toolbar_icon.svg"
+    },
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "sdfasdfsaf@asdfsadfasdf"
+        }
+    },
+
+
+    "permissions": [
+        "history",
+        "storage",
+        "webNavigation"
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "type": "module"
+    },
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["js/utils.js", "content.js"]
+    }],
+
+    "host_permissions": ["<all_urls>"],
+
+    "action": {
+        "default_icon": {
+            "19": "icons/toolbar_icon.svg",
+            "38": "icons/toolbar_icon.svg"
+        },
+        "default_title": "Open better-history"
+    }
+
+}
