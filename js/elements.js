@@ -65,7 +65,8 @@ export function setOnScrollToBottom(handler) {
 function initQuery() {
     searchInput.value = '';
     const now = new Date();
-    datePickerEnd.value = formatDatePickerValue(now);
+    datePickerStart.value = formatDatePickerValue(new Date(2024, 8, 1))
+    datePickerEnd.value = formatDatePickerValue(new Date(2024, 8, 3));
     timePickerStart.value = formatTimePickerValue(new Date(9999, 1, 1));
     timePickerEnd.value = formatTimePickerValue(now);
 }

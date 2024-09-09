@@ -50,6 +50,16 @@ export async function search(options) {
     }
 
     //filter by date again because a but in the firefox history api keep returning elements that are outside the range
+    const badHistory = items.filter(x => x.lastVisitTime < startTime || (endTime && x.lastVisitTime > endTime));
+    if(badHistory.length) {
+        console.error(`Selected date range: ${new Date(startTime)} - ${new Date(endTime)}`);
+        console.error(`    Bad dates found: ${badHistory.length}`);
+        badHistory[0].lastVisitTimeDisplay = new Date(badHistory[0].lastVisitTime);
+        console.error(`    Item #1 Url: ${badHistory[0].url}`);
+        console.error(`    Item #1 Title: ${badHistory[0].title}`);
+        console.error(`    Item #1 Date: ${new Date(badHistory[0].lastVisitTime)}`);
+    }
+   
     items = items.filter(x => x.lastVisitTime >= startTime && (!endTime || x.lastVisitTime <= endTime));
 
     if(items.length === 0) {
