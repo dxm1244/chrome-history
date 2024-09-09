@@ -1,21 +1,22 @@
 {
     "manifest_version": 3,
-    "name": "better-history",
+    "name": "chrome-history",
     "version": "1.0",
   
-    "description": "Opens the better-history extension window.",
+    "description": "Improved history display for Firefox",
   
     "icons": {
-      "48": "icons/toolbar_icon.svg",
-      "96": "icons/toolbar_icon.svg"
+        "16": "icons/logo16.png",
+        "32": "icons/logo32.png",
+        "48": "icons/logo48.png",
+        "96": "icons/logo96.png"
     },
 
     "browser_specific_settings": {
         "gecko": {
-            "id": "sdfasdfsaf@asdfsadfasdf"
+            "id": "{5107f4fb-ae53-4fdf-b334-999352183f3d}"
         }
     },
-
 
     "permissions": [
         "history",
@@ -28,19 +29,20 @@
         "type": "module"
     },
 
-    "content_scripts": [{
-        "matches": ["<all_urls>"],
-        "js": ["js/utils.js", "content.js"]
-    }],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/utils.js", "content.js"]
+        }
+    ],
 
     "host_permissions": ["<all_urls>"],
 
     "action": {
         "default_icon": {
-            "19": "icons/toolbar_icon.svg",
-            "38": "icons/toolbar_icon.svg"
+            "19": "icons/logo19.png",
+            "38": "icons/logo38.png"
         },
         "default_title": "Open better-history"
     }
-
 }

@@ -1,7 +1,6 @@
 (async () => {
     try {
         //only get favicon if none is present
-        await setFavicon(window.location.origin, null);
         if(await getFavicon(window.location.origin))
             return;
 
