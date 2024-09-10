@@ -297,6 +297,7 @@ export async function addItem(item) {
     const sanitizedUrl = sanitize(item.url);
     const displayTitle = sanitize(item.title ?? item.url);
     displayDomain = sanitize(displayDomain);
+    const sanitizedSrc = sanitize(faviconSrc);
 
     //add item to the display
     let itemDiv = document.createElement('div');
@@ -308,7 +309,7 @@ export async function addItem(item) {
     </div>
     <div id="" class="linkContainer">
         <a id="" class="link" href="${sanitizedUrl}">
-            <img id="" class="favicon" src="${faviconSrc}">
+            <img id="" class="favicon" src="${sanitizedSrc}">
             <span id="" class="title" title="${displayTitle}">${displayTitle}</span>
             <span id="" class="url" title="${sanitizedUrl}">${displayDomain}</span>
         </a>
